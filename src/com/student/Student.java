@@ -31,12 +31,12 @@ public class Student {
   //       - maybe double height?
   public void shoeChoice(String shoe){
 
-    HashMap<String,int> shoes = new HashMap<String,int>();
+    HashMap<String,Integer> shoes = new HashMap<String,Integer>();
     shoes.put("Tennis", 1);
     shoes.put("Boots", 2);
     shoes.put("Platform", 3);
 
-    height = studentHeight + shoes.get(shoe)
+    height = studentHeight + shoes.get(shoe);
   }
 
   /** Time in minutes running, weight will decrease accordingly */
