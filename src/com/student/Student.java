@@ -1,5 +1,8 @@
 package com.student;
 
+import java.util.HashMap;
+import java.util.ArrayList;
+
 // TODO:
 //  - make all f() based
 //  - friends, stdev of stats

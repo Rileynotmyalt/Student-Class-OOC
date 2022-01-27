@@ -43,7 +43,7 @@ class Main {
     System.out.println(carl.weight + " lbs ," + carl.grade + "%");
 
     Student sarah = new Student();
-    System.out.println("New Student: Sarah");
+    System.out.println("\nNew Student: Sarah");
     System.out.println("Sarah's friends: " + sarah.friends);
     System.out.println("Carl's friends: " + carl.friends);
     System.out.println("Add Sarah to Carl's friends list");
