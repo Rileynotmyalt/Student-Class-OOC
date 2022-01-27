@@ -6,6 +6,7 @@ package com.student;
 
 public class Student {
   int height = 69;
+  int studentHeight = 69;
   double grade = 0.75;
   int weight = 150;
   String hairColor = "Brown";
@@ -16,6 +17,7 @@ public class Student {
 
   public Student(int height, double grade, int weight, String hairColor, String eyeColor){
     this.height = height;
+    this.studentHeight = height;
     this.grade = grade;
     this.weight = weight;
     this.hairColor = hairColor;
@@ -25,18 +27,13 @@ public class Student {
   /** Define a Shoe Name, Height will increase accordingly*/
   // TODO: - add more shoes
   public void shoeChoice(String shoe){
-    switch (shoe) {
-      case "Tennis":
-        height += 1;
-        break;
-      case "Boots":
-        height += 2;
-        break;
-      case "Platform":
-        height += 3;
-      default:
-        break;
-    }
+
+    HashMap<String,int> shoes = new HashMap<String,int>();
+    shoes.put("Tennis", 1);
+    shoes.put("Boots", 2);
+    shoes.put("Platform", 3);
+
+    height = studentHeight + shoes.get(shoe)
   }
 
   /** Time in minutes running, weight will decrease accordingly */
