@@ -35,7 +35,6 @@ public class Student {
   // TODO: - add more shoes
   //       - maybe double height?
   public void shoeChoice(String shoe){
-
     HashMap<String,Integer> shoes = new HashMap<String,Integer>();
     shoes.put("Tennis", 1);
     shoes.put("Boots", 2);
@@ -46,19 +45,12 @@ public class Student {
 
   /** Time in minutes running, weight will decrease accordingly */
   public void run(int time) {
-    if (time >= 60)
-      weight -= 3;
-    else if (time >= 30)
-      weight -= 2;
-    else if (time >= 15)
-      weight -= 1;
+    weight -= (int)(time * 0.05);
   }
 
-  /** effort as a %, grade will increase accordingly */
+  /** effort as a %, grade will increase or decrease logistically */
   public void effort(double effort) {
-    grade += (effort >= 0.5) ? (effort-.5) / 4 : -effort;
-    grade = (grade < 0) ? 0 : grade;
-    grade = (grade > 1) ? 1 : grade;
+    grade = 1 / (1 + Math.pow(3,-3*(effort)));
   }
 
   /** change hair color */
@@ -71,6 +63,7 @@ public class Student {
     eyeColor = color;
   }
 
+  // apply similar logistic function to stress
   /** stress as a % weight and grade will be affected accordingly */
   public void stress(double stressLevel){
     if (stressLevel >= 0.5) {

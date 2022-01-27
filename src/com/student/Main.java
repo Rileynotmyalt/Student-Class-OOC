@@ -1,5 +1,10 @@
 package com.student;
 
+// TODO:
+//   - school class, includes classes, year, scores, class # grades, class Letter grades, GPA
+//   - EXP and levels?!?!
+//   - Visual?
+
 class Main {
   public static void main(String[] args) {
     Student carl = new Student("Carl");
@@ -10,7 +15,7 @@ class Main {
     carl.shoeChoice(shoes);
     System.out.println(carl.height + " in");
 
-    int minRunning = 60;
+    int minRunning = 61;
     System.out.println("\n" + carl.weight + " lbs");
     System.out.println(carl.name + " ran for " + minRunning + " minutes");
     carl.run(minRunning);
@@ -36,10 +41,14 @@ class Main {
     System.out.println(carl.eyeColor);
 
     double stressLevel = 0.3;
-    System.out.println("\n" + carl.weight + " lbs ," + carl.grade + "%");
+    System.out.print("\n" + carl.weight + " lbs ,");
+    System.out.printf("%.2f",(carl.grade * 100));
+    System.out.println("%");
     System.out.println(carl.name + " was " + (stressLevel * 100) + "% Stressed");
     carl.stress(stressLevel);
-    System.out.println(carl.weight + " lbs ," + carl.grade + "%");
+    System.out.print(carl.weight + " lbs ,");
+    System.out.printf("%.2f",(carl.grade * 100));
+    System.out.println("%");
 
     Student sarah = new Student("Sarah");
     System.out.println("\nNew Student: Sarah");
