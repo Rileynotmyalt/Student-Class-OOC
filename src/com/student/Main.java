@@ -25,8 +25,8 @@ class Main {
     System.out.print("%");
 
     String hairDye = "Blonde";
-    System.out.println(carl.hairColor);
-    System.out.println("\n" + studentName + " Dyed their hair " + carl.hairColor);
+    System.out.println("\n\n" + carl.hairColor);
+    System.out.println(studentName + " Dyed their hair " + hairDye);
     carl.dyeHair(hairDye);
     System.out.println(carl.hairColor);
 
@@ -39,6 +39,7 @@ class Main {
     double stressLevel = 0.3;
     System.out.println("\n" + carl.weight + " lbs ," + carl.grade + "%");
     System.out.println(studentName + " was " + (stressLevel * 100) + "% Stressed");
-
+    carl.stress(stressLevel);
+    System.out.println(carl.weight + " lbs ," + carl.grade + "%");
   }
 }

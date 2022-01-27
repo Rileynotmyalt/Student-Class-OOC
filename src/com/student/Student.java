@@ -1,6 +1,8 @@
 package com.student;
 
-import java.text.DecimalFormat;
+// TODO:
+//  - make all f() based
+//  - friends, stdev of stats
 
 public class Student {
   int height = 69;
@@ -21,6 +23,7 @@ public class Student {
   }
 
   /** Define a Shoe Name, Height will increase accordingly*/
+  // TODO: - add more shoes
   public void shoeChoice(String shoe){
     switch (shoe) {
       case "Tennis":
@@ -48,7 +51,7 @@ public class Student {
 
   /** effort as a %, grade will increase accordingly */
   public void effort(double effort) {
-    grade += (effort >= 0.5) ? (effort / 4)-.5 : -effort;
+    grade += (effort >= 0.5) ? (effort-.5) / 4 : -effort;
     grade = (grade < 0) ? 0 : grade;
     grade = (grade > 1) ? 1 : grade;
   }
