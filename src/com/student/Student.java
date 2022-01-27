@@ -5,9 +5,10 @@ import java.util.ArrayList;
 
 // TODO:
 //  - make all f() based
-//  - friends, stdev of stats
+//  - stdev of stats?
 
 public class Student {
+  String name = "Student Name";
   int height = 69;
   int studentHeight = 69;
   double grade = 0.75;
@@ -18,9 +19,10 @@ public class Student {
   ArrayList<Student> friends = new ArrayList<Student>();
 
   // creates a default constructor where no values need to be assigned
-  public Student(){}
+  public Student(String name){this.name = name;}
 
-  public Student(int height, double grade, int weight, String hairColor, String eyeColor){
+  public Student(String name, int height, double grade, int weight, String hairColor, String eyeColor){
+    this.name = name;
     this.height = height;
     this.studentHeight = height;
     this.grade = grade;
@@ -89,5 +91,12 @@ public class Student {
     friend.friends.add(this);
   }
 
-  // TODO: - getFriendsList()
+  /** Gets an ArrayList of names of friends */
+  ArrayList<String> fListNames = new ArrayList<String>();
+  public ArrayList<String> getFriendsList() {
+    for (int i = 0; (i < friends.size()); i++) {
+      fListNames.add(friends.get(i).name);
+    }
+    return fListNames;
+  }
 }
