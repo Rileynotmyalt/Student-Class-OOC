@@ -12,6 +12,8 @@ public class Student {
   String hairColor = "Brown";
   String eyeColor = "Brown";
 
+  ArrayList<Student> friends = new ArrayList<Student>();
+
   // creates a default constructor where no values need to be assigned
   public Student(){}
 
@@ -26,6 +28,7 @@ public class Student {
 
   /** Define a Shoe Name, Height will increase accordingly*/
   // TODO: - add more shoes
+  //       - maybe double height?
   public void shoeChoice(String shoe){
 
     HashMap<String,int> shoes = new HashMap<String,int>();
@@ -77,4 +80,9 @@ public class Student {
     }
   }
 
+  /** Adds a Student to this student's friends list */
+  public void addFriend(Student friend) {
+    friends.add(friend);
+    friend.friends.add(this);
+  }
 }
