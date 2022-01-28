@@ -1,5 +1,7 @@
 package com.student;
 
+import javax.sound.sampled.SourceDataLine;
+
 // TODO:
 //   - school class, includes classes, year, scores, class # grades, class Letter grades, GPA
 //   - EXP and levels?!?!
@@ -22,10 +24,10 @@ class Main {
     System.out.println(carl.weight + " lbs\n");
 
     double effortPercent = 0.8;
-    System.out.printf("%.2f",(carl.grade * 100));
+    System.out.printf("%.2f", (carl.grade * 100));
     System.out.println("%\n" + carl.name + " put in " + (effortPercent * 100) + "% effort");
     carl.effort(effortPercent);
-    System.out.printf("%.2f",(carl.grade * 100));
+    System.out.printf("%.2f", (carl.grade * 100));
     System.out.print("%");
 
     String hairDye = "Blonde";
@@ -42,12 +44,12 @@ class Main {
 
     double stressLevel = 0.3;
     System.out.print("\n" + carl.weight + " lbs ,");
-    System.out.printf("%.2f",(carl.grade * 100));
+    System.out.printf("%.2f", (carl.grade * 100));
     System.out.println("%");
     System.out.println(carl.name + " was " + (stressLevel * 100) + "% Stressed");
     carl.stress(stressLevel);
     System.out.print(carl.weight + " lbs ,");
-    System.out.printf("%.2f",(carl.grade * 100));
+    System.out.printf("%.2f", (carl.grade * 100));
     System.out.println("%");
 
     Student sarah = new Student("Sarah");
@@ -58,5 +60,16 @@ class Main {
     carl.addFriend(sarah);
     System.out.println(sarah.name + "'s friends: " + sarah.getFriendsList());
     System.out.println(carl.name + "'s friends: " + carl.getFriendsList());
+
+    System.out.println(factorial(5));
+  }
+
+  public static int factorial(int integer) {
+    int x = integer;
+    while (x > 0) {
+      x *= x;
+      x--;
+    }
+    return x;
   }
 }
